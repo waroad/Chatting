@@ -79,5 +79,15 @@
         android:layout_marginBottom="2dp"
         app:srcCompat="@drawable/ic_go_back" />
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        app:layout_constraintBottom_toTopOf="@+id/contactRecView"
+        app:layout_constraintEnd_toStartOf="@+id/goBack2"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

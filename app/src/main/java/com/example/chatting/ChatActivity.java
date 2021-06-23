@@ -5,11 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -18,26 +21,33 @@ public class ChatActivity extends AppCompatActivity {
 
     private RecyclerView contactsRecView;
     private LinearLayoutManager mLinearLayoutManager;
+    private TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+        Intent intentReceived = getIntent();
+        title=findViewById(R.id.title);
+        title.setText(intentReceived.getExtras().getString("Title"));
 
 
         ArrayList<Contact> contacts = new ArrayList<>();
         contacts.add(new Contact("doha2","첫번째 메시지"));
 
-        EditTextV2 editText = findViewById(R.id.editText);
-        Button submit = findViewById(R.id.submit);
         contactsRecView = findViewById(R.id.contactRecView);
         ContactsRecViewAdapter adapter = new ContactsRecViewAdapter(this);
         adapter.setContacts(contacts);
-
         contactsRecView.setAdapter(adapter);
         contactsRecView.setLayoutManager(new LinearLayoutManager(this));
         mLinearLayoutManager = new LinearLayoutManager(this);
         contactsRecView.setLayoutManager(mLinearLayoutManager);
+
+
+
+        EditTextV2 editText = findViewById(R.id.editText);
+        Button submit = findViewById(R.id.submit);
+        ImageButton goBack = findViewById(R.id.goBack);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +63,13 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
-//        mLinearLayoutManager.scrollToPosition(contacts.size() - 1);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChatActivity.this,AllChatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public static class EditTextV2 extends androidx.appcompat.widget.AppCompatEditText

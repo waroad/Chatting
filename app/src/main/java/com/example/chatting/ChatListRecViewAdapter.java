@@ -1,6 +1,7 @@
 package com.example.chatting;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,9 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, chatList.get(position).getTitle()+" selected", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(context,ChatActivity.class);
+                intent.putExtra("Title",holder.title.getText().toString());
+                context.startActivity(intent);
             }
         });
     }
