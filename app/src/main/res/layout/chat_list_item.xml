@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@id/chatPic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10sp"
+            android:text="Title Probably Long"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/chatPic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/userNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:text="2명"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/humanPic"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <ImageView
+            android:id="@+id/humanPic"
+            android:layout_width="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBaseline="@id/title"
+            app:layout_constraintStart_toEndOf="@id/chatPic"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:srcCompat="@drawable/ic_go_back" />
+
+        <ImageView
+            android:id="@+id/chatPic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_baseline_chat_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
