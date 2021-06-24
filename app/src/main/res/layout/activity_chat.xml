@@ -70,7 +70,7 @@
         app:srcCompat="@drawable/ic_go_back" />
 
     <ImageButton
-        android:id="@+id/goBack2"
+        android:id="@+id/menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@color/white"
@@ -84,8 +84,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/contactRecView"
-        app:layout_constraintEnd_toStartOf="@+id/goBack2"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
         app:layout_constraintStart_toEndOf="@+id/goBack"
         app:layout_constraintTop_toTopOf="parent" />
 

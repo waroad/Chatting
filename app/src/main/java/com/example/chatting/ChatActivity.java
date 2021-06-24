@@ -9,9 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +50,7 @@ public class ChatActivity extends AppCompatActivity {
         EditTextV2 editText = findViewById(R.id.editText);
         Button submit = findViewById(R.id.submit);
         ImageButton goBack = findViewById(R.id.goBack);
+        ImageButton menu = findViewById(R.id.menu);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +71,28 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChatActivity.this,AllChatActivity.class);
                 startActivity(intent);
+            }
+        });
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(ChatActivity.this, menu);
+                popup.getMenuInflater().inflate(R.menu.chat_menu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch(item.getTitle().toString()){
+                            case "신고하기":
+                                Toast.makeText(ChatActivity.this, "신고", Toast.LENGTH_SHORT).show();
+                                break;
+                            default:
+                                Toast.makeText(ChatActivity.this, "채팅방 나가기", Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                        return true;
+                    }
+                });
+
+                popup.show();//showing popup menu
             }
         });
     }
