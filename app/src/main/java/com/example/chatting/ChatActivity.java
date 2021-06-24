@@ -82,7 +82,8 @@ public class ChatActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch(item.getTitle().toString()){
                             case "신고하기":
-                                Toast.makeText(ChatActivity.this, "신고", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(ChatActivity.this,ReportActivity.class);
+                                startActivity(intent);
                                 break;
                             default:
                                 Toast.makeText(ChatActivity.this, "채팅방 나가기", Toast.LENGTH_SHORT).show();
