@@ -50,19 +50,16 @@ public class MyPageRecViewAdapter extends RecyclerView.Adapter<MyPageRecViewAdap
             public void onClick(View v) {
                 Intent intent;
                 switch (position){
+                    case 0:
+                        intent =new Intent(context,SuggestionsActivity.class);
+                        context.startActivity(intent);
+                        break;
                     case 1:
-                        intent =new Intent(context,ChatActivity.class);
-                        intent.putExtra("Title",holder.title.getText().toString());
+                        intent=new Intent(context,SettingsActivity.class);
                         context.startActivity(intent);
                         break;
                     case 2:
-                        intent=new Intent(context,ChatActivity.class);
-                        intent.putExtra("Title1",holder.title.getText().toString());
-                        context.startActivity(intent);
-                        break;
-                    case 3:
-                        intent=new Intent(context,ChatActivity.class);
-                        intent.putExtra("Title2",holder.title.getText().toString());
+                        intent=new Intent(context,TermsActivity.class);
                         context.startActivity(intent);
                         break;
                     default:

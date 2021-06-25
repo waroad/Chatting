@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatting"
         android:windowSoftInputMode="adjustResize">
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".ChangeNicknameActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SuggestionsActivity" />
+        <activity android:name=".TermsActivity" />
         <activity android:name=".MyPageActivity" />
         <activity android:name=".ReportActivity" />
         <activity android:name=".ChatActivity" />
