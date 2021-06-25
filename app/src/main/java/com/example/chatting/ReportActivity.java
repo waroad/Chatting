@@ -22,8 +22,7 @@ public class ReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ReportActivity.this, "신고 접수가 완료되었습니다.", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(ReportActivity.this,AllChatActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

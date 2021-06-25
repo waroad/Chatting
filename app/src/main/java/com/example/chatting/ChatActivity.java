@@ -69,8 +69,7 @@ public class ChatActivity extends AppCompatActivity {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatActivity.this,AllChatActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         menu.setOnClickListener(new View.OnClickListener() {

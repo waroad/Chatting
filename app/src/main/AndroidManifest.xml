@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatting"
         android:windowSoftInputMode="adjustResize">
-        <activity android:name=".ReportActivity"></activity>
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".ReportActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".AllChatActivity" />
         <activity android:name=".MainActivity">

@@ -23,7 +23,6 @@
         android:layout_height="1dp"
         android:layout_marginTop="40dp"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/allChatRecView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,9 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="크누마켓 채팅"
-        android:textSize="20sp"
         android:textColor="@color/pink"
-        app:layout_constraintBottom_toTopOf="@+id/allChatRecView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/toolBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
