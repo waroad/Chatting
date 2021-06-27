@@ -39,9 +39,9 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
     public void onBindViewHolder(@NonNull ChatListRecViewAdapter.ViewHolder holder, int position) {
         holder.title.setText(chatList.get(position).getTitle());
         holder.userNum.setText(chatList.get(position).getUserNum());
-        Glide.with(context).asBitmap().load(R.drawable.ic_launcher_foreground).into(holder.humanPic);
-        Glide.with(context).asBitmap().load(R.drawable.ic_baseline_chat_24).into(holder.chatPic);
-        if(chatList.get(position).isNewMessage())Glide.with(context).asBitmap().load(R.drawable.ic_baseline_chat_24_2).into(holder.chatPic);
+        Glide.with(context).asBitmap().load(R.drawable.ic_person_icon).into(holder.humanPic);
+        Glide.with(context).asBitmap().load(R.drawable.ic_chat_normal).into(holder.chatPic);
+        if(chatList.get(position).isNewMessage()) holder.newChatPic.setVisibility(View.VISIBLE);
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +65,7 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView userNum, title;
         private CardView parent;
-        private ImageView humanPic, chatPic;
+        private ImageView humanPic, chatPic,newChatPic;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -74,6 +74,7 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
             chatPic= itemView.findViewById(R.id.chatPic);
             title = itemView.findViewById(R.id.title);
             parent = itemView.findViewById(R.id.parent);
+            newChatPic= itemView.findViewById(R.id.newChatPic);
         }
     }
 }

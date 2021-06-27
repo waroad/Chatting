@@ -63,6 +63,6 @@ public class MyPageActivity extends AppCompatActivity {
     private void initViews(){
         chooseImage=findViewById(R.id.chooseImage);
         profileImage=findViewById(R.id.profileImage);
-        Glide.with(this).asBitmap().load(R.drawable.ic_sample_image).into(this.profileImage);
+        Glide.with(this).asBitmap().load(R.drawable.ic_default_profile_img).into(this.profileImage);
     }
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="10dp"
+    android:layout_marginTop="10dp"
     app:cardElevation="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +16,7 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/black"
+            android:background="@color/grey"
             app:layout_constraintBottom_toBottomOf="@id/chatPic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -52,15 +52,26 @@
             android:layout_alignBaseline="@id/title"
             app:layout_constraintStart_toEndOf="@id/chatPic"
             app:layout_constraintTop_toBottomOf="@+id/title"
-            tools:srcCompat="@drawable/ic_go_back" />
+            tools:srcCompat="@drawable/ic_person_icon" />
 
         <ImageView
+            android:paddingBottom="10dp"
             android:id="@+id/chatPic"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/ic_baseline_chat_24" />
+            tools:srcCompat="@drawable/ic_chat_normal" />
+
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/newChatPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/chatPic"
+            app:layout_constraintTop_toTopOf="@+id/chatPic"
+            app:srcCompat="@drawable/ic_new_chat" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
 

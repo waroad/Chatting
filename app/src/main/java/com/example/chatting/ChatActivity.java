@@ -48,7 +48,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
         EditTextV2 editText = findViewById(R.id.editText);
-        Button submit = findViewById(R.id.submit);
+        ImageButton submit = findViewById(R.id.submit);
         ImageButton goBack = findViewById(R.id.goBack);
         ImageButton menu = findViewById(R.id.menu);
 

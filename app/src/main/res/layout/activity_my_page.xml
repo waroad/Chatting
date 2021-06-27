@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="40dp"
-        android:background="@android:color/black"
+        android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:id="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/black"
+        android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline1" />
@@ -49,15 +49,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolBar"
         app:layout_constraintBottom_toTopOf="@+id/nickName"
-        tools:srcCompat="@drawable/ic_sample_image" />
+        tools:srcCompat="@drawable/ic_default_profile_img" />
 
     <ImageButton
         android:id="@+id/chooseImage"
-        android:layout_width="48dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/profileImage"
         app:layout_constraintEnd_toEndOf="@+id/profileImage"
-        app:srcCompat="@drawable/rounded_corner_no_background" />
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_camera" />
 
     <TextView
         android:id="@+id/nickName"
