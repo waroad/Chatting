@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +15,10 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.chatting.RecViewItems.ChatBox;
+import com.example.chatting.ViewAdapter.ChatBoxRecViewAdapter;
+import com.example.chatting.R;
 
 import java.util.ArrayList;
 

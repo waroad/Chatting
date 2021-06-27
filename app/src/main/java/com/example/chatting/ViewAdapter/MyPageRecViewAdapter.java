@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.ViewAdapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,12 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.chatting.Activity.ChatActivity;
+import com.example.chatting.Activity.SettingsActivity;
+import com.example.chatting.Activity.SuggestionsActivity;
+import com.example.chatting.Activity.TermsActivity;
+import com.example.chatting.RecViewItems.MyPageList;
+import com.example.chatting.R;
 
 import java.util.ArrayList;
 

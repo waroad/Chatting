@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatting"
         android:windowSoftInputMode="adjustResize">
-        <activity android:name=".ChangePasswordActivity" />
-        <activity android:name=".ChangeNicknameActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".SuggestionsActivity" />
-        <activity android:name=".TermsActivity" />
-        <activity android:name=".MyPageActivity" />
-        <activity android:name=".ReportActivity" />
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".AllChatActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.ChangePasswordActivity" />
+        <activity android:name=".Activity.ChangeNicknameActivity" />
+        <activity android:name=".Activity.SettingsActivity" />
+        <activity android:name=".Activity.SuggestionsActivity" />
+        <activity android:name=".Activity.TermsActivity" />
+        <activity android:name=".Activity.MyPageActivity" />
+        <activity android:name=".Activity.ReportActivity" />
+        <activity android:name=".Activity.ChatActivity" />
+        <activity android:name=".Activity.AllChatActivity" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

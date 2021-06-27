@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,26 +9,29 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ChangeNicknameActivity extends AppCompatActivity {
+import com.example.chatting.R;
+
+public class ChangePasswordActivity extends AppCompatActivity {
+
     Button submit;
     ImageButton goBack;
-    TextView newNickname;
+    TextView password1, password2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_nickname);
-
+        setContentView(R.layout.activity_change_password);
+        password1 = (TextView) findViewById(R.id.password1);
+        password2 = (TextView) findViewById(R.id.password2);
         submit = findViewById(R.id.submit);
-        newNickname = findViewById(R.id.newNickname);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (newNickname.getText().toString().length() >= 2) {
-                    Toast.makeText(ChangeNicknameActivity.this, "닉네임 변경 완료", Toast.LENGTH_SHORT).show();
+                if (password1.getText().toString().equals(password2.getText().toString())) {
+                    Toast.makeText(ChangePasswordActivity.this, "비밀번호 변경 완료", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
-                    Toast.makeText(ChangeNicknameActivity.this, "닉네임은 2자 이상이어야 합니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChangePasswordActivity.this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show();
 
                 }
             }

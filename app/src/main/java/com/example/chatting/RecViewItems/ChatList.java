@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.RecViewItems;
 
 public class ChatList {
     private String title;

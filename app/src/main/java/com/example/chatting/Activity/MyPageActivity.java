@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.chatting.RecViewItems.MyPageList;
+import com.example.chatting.ViewAdapter.MyPageRecViewAdapter;
+import com.example.chatting.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.Activity;
 
 import android.os.Bundle;
 
@@ -6,6 +6,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.chatting.RecViewItems.ChatList;
+import com.example.chatting.ViewAdapter.ChatListRecViewAdapter;
+import com.example.chatting.R;
 
 import java.util.ArrayList;
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_toolbar"
-    tools:context=".ChangeNicknameActivity">
+    tools:context=".Activity.ChangeNicknameActivity">
     <TextView
         android:id="@+id/changeNicknameTitle"
         android:layout_width="wrap_content"

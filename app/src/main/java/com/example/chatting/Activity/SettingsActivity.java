@@ -1,16 +1,14 @@
-package com.example.chatting;
+package com.example.chatting.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.chatting.R;
 
 public class SettingsActivity extends AppCompatActivity {
     private TextView changeNickname, changePassword;

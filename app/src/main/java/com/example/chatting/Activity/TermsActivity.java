@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+
+import com.example.chatting.R;
 
 import java.util.ArrayList;
 

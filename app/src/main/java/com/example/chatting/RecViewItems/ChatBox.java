@@ -1,4 +1,4 @@
-package com.example.chatting;
+package com.example.chatting.RecViewItems;
 
 import android.annotation.SuppressLint;
 
