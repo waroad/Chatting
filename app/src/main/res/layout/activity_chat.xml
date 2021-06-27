@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_toolbar"
-    tools:context=".Activity.ChatActivity">
+    tools:context=".ChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contactRecView"
@@ -21,7 +21,7 @@
 
     <view
         android:id="@+id/typedMsg"
-        class="com.example.chatting.Activity.ChatActivity$EditTextV2"
+        class="com.example.chatting.ChatActivity$EditTextV2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/contactRecView"

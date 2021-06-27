@@ -1,4 +1,4 @@
-package com.example.chatting.RecViewItems;
+package com.example.chatting;
 
 public class MyPageList {
     private String title;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_toolbar"
-    tools:context=".Activity.MyPageActivity">
+    tools:context=".MyPageActivity">
 
     <View
         android:id="@+id/line1"

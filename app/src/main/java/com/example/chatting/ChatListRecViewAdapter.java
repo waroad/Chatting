@@ -1,4 +1,4 @@
-package com.example.chatting.ViewAdapter;
+package com.example.chatting;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +14,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.chatting.Activity.ChatActivity;
-import com.example.chatting.RecViewItems.ChatList;
-import com.example.chatting.R;
 
 import java.util.ArrayList;
 
@@ -48,6 +45,7 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(context, chatList.get(position).getTitle() + " selected", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, ChatActivity.class);
                 intent.putExtra("Title", holder.title.getText().toString());
                 context.startActivity(intent);

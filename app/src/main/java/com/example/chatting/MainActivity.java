@@ -1,4 +1,4 @@
-package com.example.chatting.Activity;
+package com.example.chatting;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.chatting.R;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnChatList, btnMyPage;
