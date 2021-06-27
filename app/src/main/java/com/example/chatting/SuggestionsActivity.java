@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -14,7 +15,7 @@ public class SuggestionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suggestions);
 
-        ImageButton sendReport = findViewById(R.id.sendReport);
+        Button sendReport = findViewById(R.id.btnSendSuggestions);
 
         sendReport.setOnClickListener(new View.OnClickListener() {
             @Override

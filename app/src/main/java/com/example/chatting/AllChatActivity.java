@@ -22,9 +22,9 @@ public class AllChatActivity extends AppCompatActivity {
         chatRecView.setAdapter(adapter);
         chatRecView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<ChatList> chatList = new ArrayList<>();
-        chatList.add(new ChatList("크누마켓 전체 채팅방",214,true));
-        chatList.add(new ChatList("공차 먹을 사람",2,false));
-        chatList.add(new ChatList("덮덮밥 같이 시켜요",3,false));
+        chatList.add(new ChatList("크누마켓 전체 채팅방", 214, true));
+        chatList.add(new ChatList("공차 먹을 사람", 2, false));
+        chatList.add(new ChatList("덮덮밥 같이 시켜요", 3, false));
         adapter.setChatList(chatList);
     }
 }

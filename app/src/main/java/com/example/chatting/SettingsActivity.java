@@ -15,6 +15,7 @@ import org.w3c.dom.Text;
 public class SettingsActivity extends AppCompatActivity {
     private TextView changeNickname, changePassword;
     private ImageButton goBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +25,14 @@ public class SettingsActivity extends AppCompatActivity {
         changeNickname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(SettingsActivity.this,ChangeNicknameActivity.class);
+                Intent intent = new Intent(SettingsActivity.this, ChangeNicknameActivity.class);
                 startActivity(intent);
             }
         });
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(SettingsActivity.this,ChangePasswordActivity.class);
+                Intent intent = new Intent(SettingsActivity.this, ChangePasswordActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,9 +43,10 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
     }
-    private void initViews(){
-        changeNickname=(TextView)findViewById(R.id.changeNickname);
-        changePassword=(TextView)findViewById(R.id.changePassword);
-        goBack=findViewById(R.id.goBack);
+
+    private void initViews() {
+        changeNickname = (TextView) findViewById(R.id.changeNickname);
+        changePassword = (TextView) findViewById(R.id.changePassword);
+        goBack = findViewById(R.id.goBack);
     }
 }

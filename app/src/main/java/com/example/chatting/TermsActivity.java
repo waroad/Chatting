@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class TermsActivity extends AppCompatActivity {
     private ListView terms;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,7 +104,7 @@ public class TermsActivity extends AppCompatActivity {
                 "\n" +
                 "공고일자: 2020년 03월 04일\n" +
                 "시행일자: 2020년 03월 11일");
-        ArrayAdapter<String> termsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,term);
+        ArrayAdapter<String> termsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, term);
         terms.setAdapter(termsAdapter);
         ImageButton btnGoBack = findViewById(R.id.goBack);
         btnGoBack.setOnClickListener(new View.OnClickListener() {

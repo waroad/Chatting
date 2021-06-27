@@ -13,21 +13,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecViewAdapter.ViewHolder>{
+public class ChatBoxRecViewAdapter extends RecyclerView.Adapter<ChatBoxRecViewAdapter.ViewHolder> {
 
-    private ArrayList<com.example.chatting.Contact> contacts = new ArrayList<>();
+    private ArrayList<ChatBox> chatBoxes = new ArrayList<>();
 
     private Context context;
 
-    public ContactsRecViewAdapter(Context context) {
-        this.context=context;
+    public ChatBoxRecViewAdapter(Context context) {
+        this.context = context;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.contacts_list_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_other_chat, parent, false);
         ViewHolder holder = new ViewHolder(view);
-        View view2= LayoutInflater.from(parent.getContext()).inflate(R.layout.contacts_list_item2,parent,false);
+        View view2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_chat, parent, false);
         ViewHolder holder2 = new ViewHolder(view2);
 
         if (viewType == 0) {
@@ -35,20 +36,22 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
         }
         return holder2;
     }
+
     @Override
     public int getItemViewType(int position) {
         return position % 2;
     }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //holder.txtName.setText(contacts.get(position).getName());
-        holder.text.setText(contacts.get(position).getText());
-        holder.time.setText(contacts.get(position).getTime());
-        holder.user.setText(contacts.get(position).getName());
+        holder.text.setText(chatBoxes.get(position).getText());
+        holder.time.setText(chatBoxes.get(position).getTime());
+        holder.user.setText(chatBoxes.get(position).getName());
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, contacts.get(position).getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, chatBoxes.get(position).getName(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,17 +59,18 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
 
     @Override
     public int getItemCount() {
-        return contacts.size();
+        return chatBoxes.size();
     }
 
-    public void setContacts(ArrayList<com.example.chatting.Contact> contacts) {
-        this.contacts = contacts;
+    public void setContacts(ArrayList<ChatBox> chatBoxes) {
+        this.chatBoxes = chatBoxes;
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView user, text,time;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView user, text, time;
         private CardView parent;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             user = itemView.findViewById(R.id.user);

@@ -14,7 +14,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
@@ -22,6 +21,7 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
 
     private ArrayList<ChatList> chatList = new ArrayList<>();
     private Context context;
+
     public void setChatList(ArrayList<ChatList> chatList) {
         this.chatList = chatList;
         notifyDataSetChanged();
@@ -30,7 +30,7 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat_list, parent, false);
         return new ViewHolder(view);
     }
 
@@ -41,13 +41,13 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
         holder.userNum.setText(chatList.get(position).getUserNum());
         Glide.with(context).asBitmap().load(R.drawable.ic_person_icon).into(holder.humanPic);
         Glide.with(context).asBitmap().load(R.drawable.ic_chat_normal).into(holder.chatPic);
-        if(chatList.get(position).isNewMessage()) holder.newChatPic.setVisibility(View.VISIBLE);
+        if (chatList.get(position).isNewMessage()) holder.newChatPic.setVisibility(View.VISIBLE);
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, chatList.get(position).getTitle()+" selected", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(context,ChatActivity.class);
-                intent.putExtra("Title",holder.title.getText().toString());
+                Toast.makeText(context, chatList.get(position).getTitle() + " selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, ChatActivity.class);
+                intent.putExtra("Title", holder.title.getText().toString());
                 context.startActivity(intent);
             }
         });
@@ -65,16 +65,16 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView userNum, title;
         private CardView parent;
-        private ImageView humanPic, chatPic,newChatPic;
+        private ImageView humanPic, chatPic, newChatPic;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             userNum = itemView.findViewById(R.id.userNum);
-            humanPic= itemView.findViewById(R.id.humanPic);
-            chatPic= itemView.findViewById(R.id.chatPic);
+            humanPic = itemView.findViewById(R.id.humanPic);
+            chatPic = itemView.findViewById(R.id.chatPic);
             title = itemView.findViewById(R.id.title);
             parent = itemView.findViewById(R.id.parent);
-            newChatPic= itemView.findViewById(R.id.newChatPic);
+            newChatPic = itemView.findViewById(R.id.newChatPic);
         }
     }
 }

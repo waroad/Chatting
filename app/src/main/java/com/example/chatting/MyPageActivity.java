@@ -22,21 +22,22 @@ public class MyPageActivity extends AppCompatActivity {
     private ImageView profileImage;
     private RecyclerView myPageRecView;
     private MyPageRecViewAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_page);
         initViews();
         adapter = new MyPageRecViewAdapter(this);
-        myPageRecView=findViewById(R.id.myPageRecView);
+        myPageRecView = findViewById(R.id.myPageRecView);
         myPageRecView.setAdapter(adapter);
         myPageRecView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<MyPageList> myPageList = new ArrayList<>();
-        myPageList.add(new MyPageList("건의사항 보내기",true));
+        myPageList.add(new MyPageList("건의사항 보내기", true));
         adapter.setMyPageList(myPageList);
-        myPageList.add(new MyPageList("설정",true));
-        myPageList.add(new MyPageList("서비스 이용약관",true));
-        myPageList.add(new MyPageList("로그아웃",false));
+        myPageList.add(new MyPageList("설정", true));
+        myPageList.add(new MyPageList("서비스 이용약관", true));
+        myPageList.add(new MyPageList("로그아웃", false));
 
 
         chooseImage.setOnClickListener(new View.OnClickListener() {
@@ -60,9 +61,10 @@ public class MyPageActivity extends AppCompatActivity {
 
         }
     }
-    private void initViews(){
-        chooseImage=findViewById(R.id.chooseImage);
-        profileImage=findViewById(R.id.profileImage);
+
+    private void initViews() {
+        chooseImage = findViewById(R.id.chooseImage);
+        profileImage = findViewById(R.id.profileImage);
         Glide.with(this).asBitmap().load(R.drawable.ic_default_profile_img).into(this.profileImage);
     }
 }

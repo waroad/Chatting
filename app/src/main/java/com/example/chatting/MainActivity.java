@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnChatList, btnMyPage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,20 +18,21 @@ public class MainActivity extends AppCompatActivity {
         btnChatList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AllChatActivity.class);
+                Intent intent = new Intent(MainActivity.this, AllChatActivity.class);
                 startActivity(intent);
             }
         });
         btnMyPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MyPageActivity.class);
+                Intent intent = new Intent(MainActivity.this, MyPageActivity.class);
                 startActivity(intent);
             }
         });
 
     }
-    private void initViews(){
+
+    private void initViews() {
         btnChatList = findViewById(R.id.buttonC);
         btnMyPage = findViewById(R.id.buttonMyPage);
     }

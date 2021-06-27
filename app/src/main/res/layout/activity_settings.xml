@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_toolbar"
     tools:context=".SettingsActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/settingsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="설정"
         android:textColor="@color/pink"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolBar"
+        android:padding="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,18 +29,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_go_back" />
 
-    <View
-        android:id="@+id/toolBar"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
-        android:id="@+id/Header"
+        android:id="@+id/settingsHeader"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="15dp"
@@ -49,26 +42,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTitle"
         app:layout_constraintWidth_percent="0.9" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewNickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="닉네임:"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/Header" />
+        app:layout_constraintTop_toBottomOf="@+id/settingsHeader" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="비밀번호:"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNickname" />
 
     <TextView
         android:id="@+id/nickname"
@@ -77,8 +70,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:text="kevinKim"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/Header" />
+        app:layout_constraintStart_toEndOf="@+id/textViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/settingsHeader" />
 
     <TextView
         android:id="@+id/password"
@@ -87,7 +80,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:text="*********"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textViewPassword"
         app:layout_constraintTop_toBottomOf="@+id/nickname" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -148,8 +141,8 @@
         android:minHeight="0dp"
         android:text="회원탈퇴"
         android:textColor="@color/pink"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewPassword"
+        app:layout_constraintStart_toStartOf="@+id/textViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

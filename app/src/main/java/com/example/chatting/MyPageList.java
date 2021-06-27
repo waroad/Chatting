@@ -6,7 +6,7 @@ public class MyPageList {
 
     public MyPageList(String title, boolean hasArrow) {
         this.title = title;
-        this.hasArrow=hasArrow;
+        this.hasArrow = hasArrow;
     }
 
     @Override

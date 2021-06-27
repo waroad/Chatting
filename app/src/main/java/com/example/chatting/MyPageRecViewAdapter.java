@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -22,6 +21,7 @@ public class MyPageRecViewAdapter extends RecyclerView.Adapter<MyPageRecViewAdap
 
     private ArrayList<MyPageList> myPageList = new ArrayList<>();
     private Context context;
+
     public void setMyPageList(ArrayList<MyPageList> myPageList) {
         this.myPageList = myPageList;
         notifyDataSetChanged();
@@ -30,7 +30,7 @@ public class MyPageRecViewAdapter extends RecyclerView.Adapter<MyPageRecViewAdap
     @NonNull
     @Override
     public MyPageRecViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mypage_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mypage_list, parent, false);
         return new MyPageRecViewAdapter.ViewHolder(view);
     }
 
@@ -39,32 +39,31 @@ public class MyPageRecViewAdapter extends RecyclerView.Adapter<MyPageRecViewAdap
     public void onBindViewHolder(@NonNull MyPageRecViewAdapter.ViewHolder holder, int position) {
         holder.title.setText(myPageList.get(position).getTitle());
 
-        if(!myPageList.get(position).isHasArrow()){
+        if (!myPageList.get(position).isHasArrow()) {
             holder.title.setTextColor(Color.parseColor("#FF7979"));
-        }
-        else{
+        } else {
             Glide.with(context).asBitmap().load(R.drawable.ic_arrow).into(holder.arrowPic);
         }
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent;
-                switch (position){
+                switch (position) {
                     case 0:
-                        intent =new Intent(context,SuggestionsActivity.class);
+                        intent = new Intent(context, SuggestionsActivity.class);
                         context.startActivity(intent);
                         break;
                     case 1:
-                        intent=new Intent(context,SettingsActivity.class);
+                        intent = new Intent(context, SettingsActivity.class);
                         context.startActivity(intent);
                         break;
                     case 2:
-                        intent=new Intent(context,TermsActivity.class);
+                        intent = new Intent(context, TermsActivity.class);
                         context.startActivity(intent);
                         break;
                     default:
-                        intent=new Intent(context,ChatActivity.class);
-                        intent.putExtra("Title3",holder.title.getText().toString());
+                        intent = new Intent(context, ChatActivity.class);
+                        intent.putExtra("Title3", holder.title.getText().toString());
                         context.startActivity(intent);
                         break;
                 }
@@ -88,7 +87,7 @@ public class MyPageRecViewAdapter extends RecyclerView.Adapter<MyPageRecViewAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            arrowPic= itemView.findViewById(R.id.arrowPic);
+            arrowPic = itemView.findViewById(R.id.arrowPic);
             title = itemView.findViewById(R.id.title);
             parent = itemView.findViewById(R.id.parent);
         }

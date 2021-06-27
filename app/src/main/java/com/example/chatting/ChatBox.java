@@ -4,19 +4,19 @@ import android.annotation.SuppressLint;
 
 import java.util.Calendar;
 
-public class Contact {
+public class ChatBox {
     private String name;
     private String text;
     private String time;
 
 
     @SuppressLint("DefaultLocale")
-    public Contact(String name, String text) {
+    public ChatBox(String name, String text) {
         int currentTime = Calendar.getInstance().getTime().getHours();
         int currentTime1 = Calendar.getInstance().getTime().getMinutes();
         this.name = name;
         this.text = text;
-        this.time = String.format("%02d", currentTime)+":"+String.format("%02d", currentTime1);
+        this.time = String.format("%02d", currentTime) + ":" + String.format("%02d", currentTime1);
     }
 
     @Override

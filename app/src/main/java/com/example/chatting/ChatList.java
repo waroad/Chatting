@@ -37,7 +37,7 @@ public class ChatList {
     }
 
     public String getUserNum() {
-        return userNum +"명";
+        return userNum + "명";
     }
 
     public boolean isNewMessage() {

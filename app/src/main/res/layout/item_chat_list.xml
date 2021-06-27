@@ -12,6 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <View
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
@@ -20,12 +21,13 @@
             app:layout_constraintBottom_toBottomOf="@id/chatPic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
         <TextView
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:paddingStart="10sp"
             android:text="Title Probably Long"
             android:textSize="20sp"
@@ -47,27 +49,27 @@
         <ImageView
             android:id="@+id/humanPic"
             android:layout_width="20dp"
-            android:layout_marginStart="20dp"
             android:layout_height="20dp"
             android:layout_alignBaseline="@id/title"
+            android:layout_marginStart="20dp"
             app:layout_constraintStart_toEndOf="@id/chatPic"
             app:layout_constraintTop_toBottomOf="@+id/title"
             tools:srcCompat="@drawable/ic_person_icon" />
 
         <ImageView
-            android:paddingBottom="10dp"
             android:id="@+id/chatPic"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:paddingBottom="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/ic_chat_normal" />
 
         <ImageView
-            android:padding="2dp"
             android:id="@+id/newChatPic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="2dp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/chatPic"
             app:layout_constraintTop_toTopOf="@+id/chatPic"
