@@ -17,7 +17,7 @@ public class AllChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_all_chats);
+        setContentView(R.layout.activity_all_chats);
         adapter = new ChatListRecViewAdapter(this);
         chatRecView = findViewById(R.id.allChatRecView);
         chatRecView.setAdapter(adapter);
