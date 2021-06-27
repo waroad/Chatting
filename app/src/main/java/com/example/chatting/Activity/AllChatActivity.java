@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +21,7 @@ public class AllChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_chats);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_all_chats);
         adapter = new ChatListRecViewAdapter(this);
         chatRecView = findViewById(R.id.allChatRecView);
         chatRecView.setAdapter(adapter);
