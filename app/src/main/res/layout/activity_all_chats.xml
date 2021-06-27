@@ -19,6 +19,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_toolbar"
     tools:context=".AllChatActivity">
+<<<<<<< HEAD
+>>>>>>> parent of 4b78a86 (formating)
+=======
 >>>>>>> parent of 4b78a86 (formating)
 
         <androidx.recyclerview.widget.RecyclerView
