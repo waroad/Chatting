@@ -20,7 +20,8 @@
         app:layout_constraintTop_toBottomOf="@+id/allChatsTitle"
         app:layout_constraintVertical_bias="1.0" />
 
- 
+
+    
     <TextView
         android:id="@+id/allChatsTitle"
         android:layout_width="wrap_content"
