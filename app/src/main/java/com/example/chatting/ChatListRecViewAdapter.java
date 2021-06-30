@@ -34,7 +34,7 @@ public class ChatListRecViewAdapter extends RecyclerView.Adapter<ChatListRecView
         return new ViewHolder(view);
     }
 
-
+ 
     @Override
     public void onBindViewHolder(@NonNull ChatListRecViewAdapter.ViewHolder holder, int position) {
         holder.title.setText(chatList.get(position).getTitle());
